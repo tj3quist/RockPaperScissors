@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+    console.log("Hello, Welcome to the Rock, Paper, Scissors Game!!!")
+
+    function computerChoice(){
+        const Choices =['rock', 'paper', 'scissors'];
+        randChoice = Choices[Math.floor(Math.random()* Choices.length)];
+        return randChoice
+
+    }
+    
+
+    function playRound(playerChoice, computerChoice){
+        let x=playerChoice;
+        let y= computerChoice;
+        if 
+          ((x=='scissors' && y=='paper') || (x=='paper' && y=='rock') || (x=='rock' && y=='scissors')){
+            PlayerScore +=1;
+            console.log('Your choice beat the computer');
+            return 'Congrats!! Your choice beat the computer';
+            
+          }
+        else if 
+          ((x=='scissors' && y=='rock') || (x=='paper' && y=='scissors') || (x=='rock' && y=='paper')){
+            CompScore +=1;
+            console.log (' Sorry, the computers choice beat you!');
+            return ' Sorry, the computers choice beat you!';
+            
+        }
+        else {
+            console.log('You both picked the same, this round is a tie');
+            return;
+        }
+        }
+        
+    
+
+    function playerChoice(){
+      playersmove= window.prompt("Would you like to choose rock, paper or scissors", 'rock')
+      
+      if (playersmove.toLowerCase()=='rock'){
+        return 'rock';
+      }
+      else if (playersmove.toLowerCase()=='paper'){
+        return 'paper';
+      }
+      else if (playersmove.toLowerCase()=='scissors'){
+        return 'scissors';
+      }
+      else {
+        alert("you did not pick any of the options you dingo");
+      } 
+    }
+  
+  var CompScore = 0
+  var PlayerScore = 0
+  
+
+  playRound(playerChoice(),computerChoice())
+  playRound(playerChoice(),computerChoice())
+  playRound(playerChoice(),computerChoice())
+  playRound(playerChoice(),computerChoice())
+  playRound(playerChoice(),computerChoice())
+
+  console.log("What a game, the final score was the computer "+ CompScore + " and you, the player had "+PlayerScore)
+    
+    
+
+   
+
+
+  </script>
+</body>
+</html>
